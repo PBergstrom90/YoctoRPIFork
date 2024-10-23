@@ -2,14 +2,12 @@
 #include <stdlib.h>
 
 int main() {
-    // Replace this URL with your actual webhook.site URL
+    // URL for webhook
     const char* url = "https://webhook.site/f7e2483f-6877-4ed1-8fb8-7a58ce137074";
     
     // Command to execute
     char command[256];
-    snprintf(command, sizeof(command), "wget --post-data='Hello from hello-internet' -qO- %s", url);
-
-    // Execute the command
+    snprintf(command, sizeof(command), "wget --post-data='Hello from Pontus hello-internet' -qO- %s", url);
     int ret = system(command);
 
     // Check the result of the system command
@@ -18,6 +16,5 @@ int main() {
     } else {
         printf("Failed to send HTTP POST request.\n");
     }
-
     return 0;
 }
